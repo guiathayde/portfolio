@@ -1,6 +1,6 @@
 {
   "name": "portifolio",
-  "homepage": "https://guiathayde.github.io/portifolio/",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

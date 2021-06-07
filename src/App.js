@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useMemo } from "react";
 import "./App.scss";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -12,7 +12,8 @@ import primaryLanguageJs from "./data/res_primaryLanguage";
 import secondaryLanguageJs from "./data/res_secondaryLanguage";
 
 const App = () => {
-  const [sharedData, setSharedData] = useState(sharedDataJs[0]);
+  const sharedData = useMemo(() => sharedDataJs[0], []);
+
   const [resumeData, setResumeData] = useState(primaryLanguageJs[0]);
 
   const swapCurrentlyActiveLanguage = useCallback((oppositeLangIconId) => {
