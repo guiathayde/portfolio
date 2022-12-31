@@ -1,4 +1,5 @@
 # Portfolio
+
 <div align="center">
   <br />
   <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--3zWuwYa3--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pdib9r9rk5j1m7oala1p.png" alt="Logo React Native" width="500px" height="300px">
@@ -8,6 +9,7 @@
 </h4>
 
 ## :eye_speech_bubble: Demo
+
 ![Demo gif](https://github.com/guiathayde/portfolio/blob/main/res/demo_website.gif)
 
 ## 🧪 Tecnologies
