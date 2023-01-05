@@ -28,7 +28,7 @@ export const Description = styled.p`
   line-height: 24px;
   color: #ffffff;
 
-  max-width: 75%;
+  max-width: 70%;
   word-wrap: break-word;
   overflow: hidden;
 `;
@@ -40,4 +40,6 @@ export const Duration = styled.p`
   font-size: 15px;
   line-height: 24px;
   color: #ffffff;
+
+  margin-right: 24px;
 `;

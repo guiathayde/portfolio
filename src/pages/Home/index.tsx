@@ -2,7 +2,8 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Marquee } from './components/Marquee';
 import { About } from './components/About';
-import { Expirience } from './components/Expirience';
+import { Expirience } from './components/Experience';
+import { Skills } from './components/Skills';
 
 import { Container } from './styles';
 
@@ -18,6 +19,8 @@ export function Home() {
       <About />
 
       <Expirience />
+
+      <Skills />
     </Container>
   );
 }
