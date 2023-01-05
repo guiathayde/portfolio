@@ -7,9 +7,9 @@ import {
   DownloadCVButton,
 } from './styles';
 
-import GitHubIcon from '../../assets/GitHubIcon.svg';
-import TwitterIcon from '../../assets/TwitterIcon.svg';
-import InstagramIcon from '../../assets/InstagramIcon.svg';
+import GitHubIcon from '../../../../assets/GitHubIcon.svg';
+import TwitterIcon from '../../../../assets/TwitterIcon.svg';
+import InstagramIcon from '../../../../assets/InstagramIcon.svg';
 
 export function Header() {
   return (

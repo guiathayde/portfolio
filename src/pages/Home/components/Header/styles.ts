@@ -39,6 +39,8 @@ export const SocialMediaButton = styled.button`
   background-color: transparent;
 
   margin: 4px;
+
+  border: none;
 `;
 
 export const SocialMediaIcon = styled.img`
