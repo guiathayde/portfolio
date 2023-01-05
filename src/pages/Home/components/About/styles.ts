@@ -90,13 +90,13 @@ export const TechsWorkedRecentlyText = styled.h4`
 export const TechsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
 `;
 
 export const Tech = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
 
   font-family: 'Inter';
   font-style: normal;
@@ -111,6 +111,8 @@ export const Tech = styled.div`
 export const TechDot = styled.img`
   width: 18px;
   height: 11px;
+
+  margin-right: 8px;
 `;
 
 export const ColumnRightContainer = styled.div`

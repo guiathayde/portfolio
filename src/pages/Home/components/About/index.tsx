@@ -17,6 +17,7 @@ import {
 import GitHubIcon from '../../../../assets/GitHubIcon.svg';
 import TwitterIcon from '../../../../assets/TwitterIcon.svg';
 import InstagramIcon from '../../../../assets/InstagramIcon.svg';
+import TechDotImg from '../../../../assets/TechDot.svg';
 import DeskImg from '../../../../assets/Desk.png';
 
 export function About() {
@@ -62,27 +63,27 @@ export function About() {
 
         <TechsContainer>
           <Tech>
-            <TechDot />
+            <TechDot src={TechDotImg} />
             React
           </Tech>
           <Tech>
-            <TechDot />
+            <TechDot src={TechDotImg} />
             React Native
           </Tech>
           <Tech>
-            <TechDot />
+            <TechDot src={TechDotImg} />
             Express
           </Tech>
           <Tech>
-            <TechDot />
+            <TechDot src={TechDotImg} />
             PostgreSQL
           </Tech>
           <Tech>
-            <TechDot />
+            <TechDot src={TechDotImg} />
             TypeScript
           </Tech>
           <Tech>
-            <TechDot />
+            <TechDot src={TechDotImg} />
             Figma
           </Tech>
         </TechsContainer>
