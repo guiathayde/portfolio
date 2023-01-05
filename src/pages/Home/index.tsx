@@ -4,6 +4,7 @@ import { Marquee } from './components/Marquee';
 import { About } from './components/About';
 import { Expirience } from './components/Experience';
 import { Skills } from './components/Skills';
+import { Portfolio } from './components/Portfolio';
 
 import { Container } from './styles';
 
@@ -21,6 +22,8 @@ export function Home() {
       <Expirience />
 
       <Skills />
+
+      <Portfolio />
     </Container>
   );
 }
