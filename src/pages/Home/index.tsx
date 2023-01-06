@@ -5,6 +5,8 @@ import { About } from './components/About';
 import { Expirience } from './components/Experience';
 import { Skills } from './components/Skills';
 import { Portfolio } from './components/Portfolio';
+import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 
 import { Container } from './styles';
 
@@ -24,6 +26,10 @@ export function Home() {
       <Skills />
 
       <Portfolio />
+
+      <Contact />
+
+      <Footer />
     </Container>
   );
 }
