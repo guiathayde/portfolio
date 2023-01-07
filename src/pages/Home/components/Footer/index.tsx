@@ -1,9 +1,12 @@
+import { useLanguage } from '../../../../hooks/language';
 import { Container, MadeBy } from './styles';
 
 export function Footer() {
+  const { strings } = useLanguage();
+
   return (
     <Container>
-      <MadeBy>Made with ❤️ by guiathayde</MadeBy>
+      <MadeBy>{strings.Home.Footer.madeWith}</MadeBy>
     </Container>
   );
 }

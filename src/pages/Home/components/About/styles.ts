@@ -39,7 +39,6 @@ export const Description = styled.p`
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-  text-transform: lowercase;
 
   color: #ffffff;
 
@@ -79,7 +78,6 @@ export const TechsWorkedRecentlyText = styled.h4`
   font-weight: 700;
   font-size: 15px;
   line-height: 24px;
-  text-transform: capitalize;
 
   color: #ffffff;
 

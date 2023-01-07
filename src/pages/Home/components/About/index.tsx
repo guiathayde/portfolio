@@ -1,3 +1,5 @@
+import { useLanguage } from '../../../../hooks/language';
+
 import {
   Container,
   ColumnLeftContainer,
@@ -21,6 +23,8 @@ import TechDotImg from '../../../../assets/TechDot.svg';
 import DeskImg from '../../../../assets/Desk.png';
 
 export function About() {
+  const { strings } = useLanguage();
+
   return (
     <Container>
       <ColumnLeftContainer>
@@ -32,18 +36,12 @@ export function About() {
           }}
         >
           <Heading color="#FF8E5E" style={{ marginRight: 12 }}>
-            About{' '}
+            {strings.Home.About.about + ' '}
           </Heading>
-          <Heading>me</Heading>
+          <Heading>{strings.Home.About.me}</Heading>
         </div>
 
-        <Description>
-          A creative professional with a strong portfolio in websites and
-          mobiles app, including experience with front-end development.
-          Experienced working from concept to production, and with stakeholders
-          from multiple disciplines. A fluent user of popular design tool, the
-          Figma and developing with frameworks like React.
-        </Description>
+        <Description>{strings.Home.About.description}</Description>
 
         <SocialMediaContainer>
           <SocialMediaButton>
@@ -58,7 +56,7 @@ export function About() {
         </SocialMediaContainer>
 
         <TechsWorkedRecentlyText>
-          Here are a few technologies I&apos;ve been working with recently:
+          {strings.Home.About.techsWorkedRecently}
         </TechsWorkedRecentlyText>
 
         <TechsContainer>

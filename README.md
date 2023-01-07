@@ -47,11 +47,5 @@ $ npm run deploy
 - Access the link http://localhost:3000/
 
 <br/>
-<div style="display:flex; justify-content:center;">
-<img align="left" src="https://github.com/leungwensen/svg-icon/blob/master/dist/svg/logos/react.svg" height="50" alt="react icon"/>
-<h2>Portfolio Template</h2>
-<div/>
-
-- [Dorota1997](https://github.com/Dorota1997/react-frontend-dev-portfolio)
 
 <p align="center">Made with 💜 by Guilherme Athayde</p>

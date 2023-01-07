@@ -10,7 +10,12 @@ import {
 export function Marquee() {
   return (
     <Container>
-      <FastMarquee style={FastMarqueeStyles}>
+      <FastMarquee
+        style={FastMarqueeStyles}
+        speed={60}
+        pauseOnHover
+        pauseOnClick
+      >
         <TechMarqueeText>HTML 5</TechMarqueeText>
         <AsteriskMarqueeText>*</AsteriskMarqueeText>
         <TechMarqueeText>CSS</TechMarqueeText>

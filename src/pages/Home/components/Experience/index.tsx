@@ -1,12 +1,16 @@
+import { useLanguage } from '../../../../hooks/language';
+
 import { Content } from './Content';
 
 import { Container, ContentContainer, ContentTitle } from './styles';
 
 export function Expirience() {
+  const { strings } = useLanguage();
+
   return (
     <Container>
       <ContentContainer>
-        <ContentTitle>🎓 Education</ContentTitle>
+        <ContentTitle>🎓 {strings.Home.Experience.education}</ContentTitle>
         <Content
           title="Universidade Tecnológica Federal do Paraná"
           description="Bacharelado: Engenharia da Computação"
@@ -26,7 +30,7 @@ export function Expirience() {
       </ContentContainer>
 
       <ContentContainer>
-        <ContentTitle>💼 Professional Experience</ContentTitle>
+        <ContentTitle>💼 {strings.Home.Experience.professional}</ContentTitle>
         <Content
           title="nós - Nosso Olhar Solidário (UTFPR)"
           description="Full Stack Developer"

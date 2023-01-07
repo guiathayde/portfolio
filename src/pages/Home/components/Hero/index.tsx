@@ -1,5 +1,7 @@
 import { ButtonGetInTouch } from '../ButtonGetInTouch';
 
+import { useLanguage } from '../../../../hooks/language';
+
 import {
   Container,
   ColumnLeftContainer,
@@ -17,22 +19,19 @@ import ProfileImg from '../../../../assets/profile.jpg';
 import ScrollToContinueImg from '../../../../assets/scrollExplorer.svg';
 
 export function Hero() {
+  const { strings } = useLanguage();
+
   return (
     <Container>
       <ColumnLeftContainer>
         <div style={{ display: 'flex', flexDirection: 'row' }}>
-          <ApresentationEmoji>✋</ApresentationEmoji>
-          <Apresentation> Hello, my name is</Apresentation>
+          <ApresentationEmoji>✋ </ApresentationEmoji>
+          <Apresentation>{strings.Home.Hero.apresentation}</Apresentation>
         </div>
         <ApresentationName>Guilherme.</ApresentationName>
 
         <AboutTitle>Front-end, Back-end and Mobile Developer</AboutTitle>
-        <AboutDescription>
-          I create websites that are a pleasure to use. I&apos;m Computer
-          Engineering Student at UTFPR, working with newest front-end frameworks
-          like React and React Native. On back-end I&apos;m using Express and
-          Socket.io. And with mobile using React Native and Android native.
-        </AboutDescription>
+        <AboutDescription>{strings.Home.Hero.about}</AboutDescription>
 
         <ButtonGetInTouch backgroundColor="orange" />
       </ColumnLeftContainer>

@@ -18,6 +18,8 @@ export const Title = styled.h4`
   font-size: 28px;
   line-height: 24px;
   color: #ffffff;
+
+  margin-bottom: 8px;
 `;
 
 export const Description = styled.p`

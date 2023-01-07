@@ -1,3 +1,5 @@
+import { useLanguage } from '../../../../hooks/language';
+
 import {
   Container,
   Heading,
@@ -8,11 +10,15 @@ import {
 } from './styles';
 
 export function Portfolio() {
+  const { strings } = useLanguage();
+
   return (
     <Container>
       <Heading>
-        <Title>I create jobs</Title>
-        <Title color="#FF8E5E">that enchant people</Title>
+        <Title>{strings.Home.Portfolio.iCreateJobs}</Title>
+        <Title color="#FF8E5E">
+          {strings.Home.Portfolio.thatEnchantPeople}
+        </Title>
       </Heading>
 
       <PortfolioContainer>

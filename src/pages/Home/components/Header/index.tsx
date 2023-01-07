@@ -1,3 +1,7 @@
+import { LanguageSwitcherSelector } from './LanguageSwitcherSelector';
+
+import { useLanguage } from '../../../../hooks/language';
+
 import {
   Container,
   Title,
@@ -12,11 +16,15 @@ import TwitterIcon from '../../../../assets/TwitterIcon.svg';
 import InstagramIcon from '../../../../assets/InstagramIcon.svg';
 
 export function Header() {
+  const { strings } = useLanguage();
+
   return (
     <Container>
       <Title>guiathayde.dev</Title>
 
       <ColumnRightContainer>
+        <LanguageSwitcherSelector containerStyle={{ marginRight: 16 }} />
+
         <SocialMediaButton>
           <SocialMediaIcon src={GitHubIcon} />
         </SocialMediaButton>
@@ -27,7 +35,7 @@ export function Header() {
           <SocialMediaIcon src={InstagramIcon} />
         </SocialMediaButton>
 
-        <DownloadCVButton>Download CV</DownloadCVButton>
+        <DownloadCVButton>{strings.Home.Header.downloadCV}</DownloadCVButton>
       </ColumnRightContainer>
     </Container>
   );
