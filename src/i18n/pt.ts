@@ -21,6 +21,7 @@ export default {
     Experience: {
       education: 'Educação',
       professional: 'Experiência Profissional',
+      currently: 'Atualmente',
     },
     Skills: {
       my: 'Minhas',

@@ -40,6 +40,7 @@ interface StringValues {
     Experience: {
       education: string;
       professional: string;
+      currently: string;
     };
     Skills: {
       my: string;

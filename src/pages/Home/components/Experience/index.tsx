@@ -14,7 +14,7 @@ export function Expirience() {
         <Content
           title="Universidade Tecnológica Federal do Paraná"
           description="Bacharelado: Engenharia da Computação"
-          duration="01/2021 - Atualmente"
+          duration={`01/2021 - ${strings.Home.Experience.currently}`}
         />
         <Content
           title="Python"
@@ -34,12 +34,12 @@ export function Expirience() {
         <Content
           title="nós - Nosso Olhar Solidário (UTFPR)"
           description="Full Stack Developer"
-          duration="08/2020 - Atualmente"
+          duration={`08/2020 - ${strings.Home.Experience.currently}`}
         />
         <Content
           title="Ubivis"
           description="Android and Front-end Developer"
-          duration="09/2021 - Atualmente"
+          duration={`09/2021 - ${strings.Home.Experience.currently}`}
         />
         <Content
           title="Amigos dos Jardinetes (UTFPR)"

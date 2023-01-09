@@ -18,6 +18,10 @@ import InstagramIcon from '../../../../assets/InstagramIcon.svg';
 export function Header() {
   const { strings } = useLanguage();
 
+  function openUrl(url: string) {
+    window.open(url, '_blank');
+  }
+
   return (
     <Container>
       <Title>guiathayde.dev</Title>
@@ -25,13 +29,19 @@ export function Header() {
       <ColumnRightContainer>
         <LanguageSwitcherSelector containerStyle={{ marginRight: 16 }} />
 
-        <SocialMediaButton>
+        <SocialMediaButton
+          onClick={() => openUrl('https://github.com/guiathayde')}
+        >
           <SocialMediaIcon src={GitHubIcon} />
         </SocialMediaButton>
-        <SocialMediaButton>
+        <SocialMediaButton
+          onClick={() => openUrl('https://twitter.com/GuiAthayde_')}
+        >
           <SocialMediaIcon src={TwitterIcon} />
         </SocialMediaButton>
-        <SocialMediaButton>
+        <SocialMediaButton
+          onClick={() => openUrl('https://www.instagram.com/guiathayde_/')}
+        >
           <SocialMediaIcon src={InstagramIcon} />
         </SocialMediaButton>
 

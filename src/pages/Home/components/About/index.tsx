@@ -25,6 +25,10 @@ import DeskImg from '../../../../assets/Desk.png';
 export function About() {
   const { strings } = useLanguage();
 
+  function openUrl(url: string) {
+    window.open(url, '_blank');
+  }
+
   return (
     <Container>
       <ColumnLeftContainer>
@@ -44,13 +48,19 @@ export function About() {
         <Description>{strings.Home.About.description}</Description>
 
         <SocialMediaContainer>
-          <SocialMediaButton>
+          <SocialMediaButton
+            onClick={() => openUrl('https://github.com/guiathayde')}
+          >
             <SocialMediaIcon src={GitHubIcon} />
           </SocialMediaButton>
-          <SocialMediaButton>
+          <SocialMediaButton
+            onClick={() => openUrl('https://twitter.com/GuiAthayde_')}
+          >
             <SocialMediaIcon src={TwitterIcon} />
           </SocialMediaButton>
-          <SocialMediaButton>
+          <SocialMediaButton
+            onClick={() => openUrl('https://www.instagram.com/guiathayde_/')}
+          >
             <SocialMediaIcon src={InstagramIcon} />
           </SocialMediaButton>
         </SocialMediaContainer>
