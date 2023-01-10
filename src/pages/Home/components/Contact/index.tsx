@@ -13,7 +13,7 @@ export function Contact() {
         <Title>{strings.Home.Contact.letsBuildYour}</Title>
         <Title>{strings.Home.Contact.projectTogether}</Title>
 
-        <ButtonGetInTouch backgroundColor="white" />
+        <ButtonGetInTouch backgroundColor="white" style={{ marginTop: 24 }} />
       </Content>
     </Container>
   );

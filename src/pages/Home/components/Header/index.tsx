@@ -1,6 +1,7 @@
 import { LanguageSwitcherSelector } from './LanguageSwitcherSelector';
 
 import { useLanguage } from '../../../../hooks/language';
+import { useWindowDimensions } from '../../../../hooks/windowDimensions';
 
 import {
   Container,
@@ -17,6 +18,7 @@ import InstagramIcon from '../../../../assets/InstagramIcon.svg';
 
 export function Header() {
   const { strings } = useLanguage();
+  const { width } = useWindowDimensions();
 
   function openUrl(url: string) {
     window.open(url, '_blank');
@@ -24,7 +26,7 @@ export function Header() {
 
   return (
     <Container>
-      <Title>guiathayde.dev</Title>
+      {width > 425 && <Title>guiathayde.dev</Title>}
 
       <ColumnRightContainer>
         <LanguageSwitcherSelector containerStyle={{ marginRight: 16 }} />

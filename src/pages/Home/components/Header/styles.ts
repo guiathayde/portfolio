@@ -11,6 +11,12 @@ export const Container = styled.div`
   padding: 32px 64px;
 
   border-bottom: 3px solid rgba(255, 255, 255, 0.02);
+
+  @media (max-width: 425px) {
+    justify-content: center;
+
+    padding: 32px 16px;
+  }
 `;
 
 export const Title = styled.h1`

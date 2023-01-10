@@ -1,6 +1,7 @@
 import { ButtonGetInTouch } from '../ButtonGetInTouch';
 
 import { useLanguage } from '../../../../hooks/language';
+import { useWindowDimensions } from '../../../../hooks/windowDimensions';
 
 import {
   Container,
@@ -20,6 +21,7 @@ import ScrollToContinueImg from '../../../../assets/scrollExplorer.svg';
 
 export function Hero() {
   const { strings } = useLanguage();
+  const { width } = useWindowDimensions();
 
   return (
     <Container>
@@ -33,16 +35,23 @@ export function Hero() {
         <AboutTitle>Front-end, Back-end and Mobile Developer</AboutTitle>
         <AboutDescription>{strings.Home.Hero.about}</AboutDescription>
 
-        <ButtonGetInTouch backgroundColor="orange" />
+        <ButtonGetInTouch
+          backgroundColor="orange"
+          style={{
+            alignSelf: width > 425 ? 'flex-start' : 'center',
+          }}
+        />
       </ColumnLeftContainer>
 
-      <ColumnRightContainer>
-        <ProfileImage src={ProfileImg} alt="Guilherme Athayde" />
-        <ScrollToContinueImage
-          src={ScrollToContinueImg}
-          alt="Scroll to continue"
-        />
-      </ColumnRightContainer>
+      {width > 425 && (
+        <ColumnRightContainer>
+          <ProfileImage src={ProfileImg} alt="Guilherme Athayde" />
+          <ScrollToContinueImage
+            src={ScrollToContinueImg}
+            alt="Scroll to continue"
+          />
+        </ColumnRightContainer>
+      )}
     </Container>
   );
 }

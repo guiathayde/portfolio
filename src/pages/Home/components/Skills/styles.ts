@@ -18,6 +18,10 @@ export const Container = styled.div`
   width: 100%;
 
   background: #19191d;
+
+  @media (max-width: 425px) {
+    padding: 60px 16px;
+  }
 `;
 
 export const Content = styled.div`
@@ -30,6 +34,18 @@ export const Content = styled.div`
   width: 100%;
 `;
 
+export const Heading = styled.div`
+  display: flex;
+  flex-direction: row;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: initial;
+
+  @media (max-width: 425px) {
+    max-width: 393px;
+  }
+`;
+
 export const Title = styled.span<TitleProps>`
   font-family: 'Inter';
   font-style: normal;
@@ -38,6 +54,10 @@ export const Title = styled.span<TitleProps>`
   line-height: 54px;
 
   color: ${props => props.color ?? '#ffffff'};
+
+  @media (max-width: 425px) {
+    font-size: 40px;
+  }
 `;
 
 export const SkillsList = styled.div`
@@ -46,6 +66,10 @@ export const SkillsList = styled.div`
   grid-gap: 24px;
 
   width: 100%;
+
+  @media (max-width: 425px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const SkillItem = styled.div<SkillItemProps>`

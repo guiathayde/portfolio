@@ -14,6 +14,10 @@ export const Container = styled.div`
   width: 100%;
 
   padding: 32px 128px;
+
+  @media (max-width: 425px) {
+    padding: 32px 16px;
+  }
 `;
 
 export const Heading = styled.div`
@@ -33,12 +37,20 @@ export const Title = styled.h2<TitleProps>`
   line-height: 53px;
   text-align: center;
   color: ${({ color }) => color ?? 'white'};
+
+  @media (max-width: 425px) {
+    font-size: 44px;
+  }
 `;
 
 export const PortfolioContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
+
+  @media (max-width: 425px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const PortfolioItem = styled.div`

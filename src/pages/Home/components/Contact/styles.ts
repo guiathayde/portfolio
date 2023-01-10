@@ -5,11 +5,14 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 
   background: #19191d;
 
   padding: 100px 0;
+
+  @media (max-width: 425px) {
+    padding: 100px 16px;
+  }
 `;
 
 export const Content = styled.div`
@@ -17,7 +20,6 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 29px;
 `;
 
 export const Title = styled.h6`
@@ -28,4 +30,8 @@ export const Title = styled.h6`
   line-height: 53px;
   text-align: center;
   color: #ff8e5e;
+
+  @media (max-width: 425px) {
+    font-size: 32px;
+  }
 `;

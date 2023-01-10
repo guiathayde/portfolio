@@ -9,6 +9,10 @@ export const Container = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
   margin-top: 32px;
+
+  @media (max-width: 425px) {
+    max-width: 393px;
+  }
 `;
 
 export const Title = styled.h4`
@@ -20,6 +24,11 @@ export const Title = styled.h4`
   color: #ffffff;
 
   margin-bottom: 8px;
+
+  @media (max-width: 425px) {
+    word-wrap: break-word;
+    overflow: hidden;
+  }
 `;
 
 export const Description = styled.p`
@@ -33,6 +42,10 @@ export const Description = styled.p`
   max-width: 70%;
   word-wrap: break-word;
   overflow: hidden;
+
+  @media (max-width: 425px) {
+    max-width: 393px;
+  }
 `;
 
 export const Duration = styled.p`

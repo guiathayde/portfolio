@@ -9,6 +9,13 @@ export const Container = styled.div`
   width: 100%;
 
   padding: 32px 128px;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 32px 16px;
+  }
 `;
 
 export const ColumnLeftContainer = styled.div`

@@ -8,6 +8,12 @@ export const Container = styled.div`
   width: 100%;
 
   padding: 32px 128px;
+
+  @media (max-width: 425px) {
+    grid-template-columns: 1fr;
+
+    padding: 32px 16px;
+  }
 `;
 
 export const ContentContainer = styled.div``;
@@ -22,4 +28,8 @@ export const ContentTitle = styled.h3`
   color: #ffffff;
 
   margin-bottom: 32px;
+
+  @media (max-width: 425px) {
+    max-width: 393px;
+  }
 `;

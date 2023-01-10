@@ -3,6 +3,7 @@ import { useLanguage } from '../../../../hooks/language';
 import {
   Container,
   Content,
+  Heading,
   Title,
   SkillsList,
   SkillItem,
@@ -15,10 +16,10 @@ export function Skills() {
   return (
     <Container>
       <Content>
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <Heading>
           <Title style={{ marginRight: 8 }}>{strings.Home.Skills.my}</Title>
           <Title color="#FE8E5E">{strings.Home.Skills.skills}</Title>
-        </div>
+        </Heading>
         <SkillsList>
           <SkillItem rectangleColor="#1669B4">
             <div className="rectangle"></div>

@@ -1,5 +1,7 @@
 import FastMarquee from 'react-fast-marquee';
 
+import { useWindowDimensions } from '../../../../hooks/windowDimensions';
+
 import {
   Container,
   FastMarqueeStyles,
@@ -8,11 +10,14 @@ import {
 } from './styles';
 
 export function Marquee() {
+  const { width } = useWindowDimensions();
+
   return (
     <Container>
       <FastMarquee
         style={FastMarqueeStyles}
         speed={60}
+        gradientWidth={width > 425 ? 200 : 32}
         pauseOnHover
         pauseOnClick
       >

@@ -23,6 +23,7 @@ export const FastMarqueeStyles: CSSProperties = {
   alignItems: 'center',
   width: '100%',
   height: 60,
+  padding: '8px 0px',
 };
 
 export const TechMarqueeText = styled.span`

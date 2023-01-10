@@ -1,4 +1,5 @@
 import { useLanguage } from '../../../../hooks/language';
+import { useWindowDimensions } from '../../../../hooks/windowDimensions';
 
 import {
   Container,
@@ -24,6 +25,7 @@ import DeskImg from '../../../../assets/Desk.png';
 
 export function About() {
   const { strings } = useLanguage();
+  const { width } = useWindowDimensions();
 
   function openUrl(url: string) {
     window.open(url, '_blank');
@@ -97,9 +99,11 @@ export function About() {
         </TechsContainer>
       </ColumnLeftContainer>
 
-      <ColumnRightContainer>
-        <DeskImage src={DeskImg} />
-      </ColumnRightContainer>
+      {width > 425 && (
+        <ColumnRightContainer>
+          <DeskImage src={DeskImg} />
+        </ColumnRightContainer>
+      )}
     </Container>
   );
 }
