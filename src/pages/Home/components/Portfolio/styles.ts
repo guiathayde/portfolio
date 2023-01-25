@@ -53,13 +53,16 @@ export const PortfolioContainer = styled.div`
   }
 `;
 
-export const PortfolioItem = styled.div`
+export const PortfolioItem = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
 
   width: 345px;
   height: 345px;
+
+  border: none;
+  border-radius: 20px;
 `;
 
 export const PortfolioItemImg = styled.img`
@@ -69,5 +72,11 @@ export const PortfolioItemImg = styled.img`
   object-fit: cover;
 
   border-radius: 20px;
-  filter: opacity(50%);
+  filter: opacity(80%);
+
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: opacity(100%);
+  }
 `;
