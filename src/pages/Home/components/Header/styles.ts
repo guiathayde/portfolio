@@ -54,7 +54,7 @@ export const SocialMediaIcon = styled.img`
   height: 18px;
 `;
 
-export const DownloadCVButton = styled.button`
+export const DownloadCVButton = styled.a`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -76,6 +76,6 @@ export const DownloadCVButton = styled.button`
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-
+  text-decoration: none;
   color: #ffffff;
 `;

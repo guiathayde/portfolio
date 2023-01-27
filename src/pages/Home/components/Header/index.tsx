@@ -47,7 +47,9 @@ export function Header() {
           <SocialMediaIcon src={InstagramIcon} />
         </SocialMediaButton>
 
-        <DownloadCVButton>{strings.Home.Header.downloadCV}</DownloadCVButton>
+        <DownloadCVButton href="CV.pdf" target="_blank" download>
+          {strings.Home.Header.downloadCV}
+        </DownloadCVButton>
       </ColumnRightContainer>
     </Container>
   );

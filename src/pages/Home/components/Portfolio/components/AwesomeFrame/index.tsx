@@ -14,6 +14,7 @@ import {
 import OpenInNewIcon from '../../../../../../assets/OpenInNew.svg';
 
 interface AwesomeFrameProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   images: any[];
   title: string;
   link: string;
