@@ -7,6 +7,11 @@ export function Footer() {
   return (
     <Container>
       <MadeBy>{strings.Home.Footer.madeWith}</MadeBy>
+
+      <a href="/privacy-policy">{strings.Home.Footer.privacyPolicy}</a>
+      <a href="/terms-and-conditions">
+        {strings.Home.Footer.termsAndConditions}
+      </a>
     </Container>
   );
 }

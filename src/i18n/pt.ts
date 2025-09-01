@@ -46,6 +46,8 @@ export default {
     },
     Footer: {
       madeWith: 'Feito com ❤️ por guiathayde',
+      privacyPolicy: 'Política de Privacidade',
+      termsAndConditions: 'Termos e Condições',
     },
   },
 };

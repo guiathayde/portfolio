@@ -6,7 +6,8 @@
     "start": "NODE_ENV=development react-scripts start",
     "build": "NODE_ENV=production react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "yarn build && firebase deploy --only hosting"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",

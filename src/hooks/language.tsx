@@ -62,6 +62,8 @@ interface StringValues {
     };
     Footer: {
       madeWith: string;
+      privacyPolicy: string;
+      termsAndConditions: string;
     };
   };
 }
