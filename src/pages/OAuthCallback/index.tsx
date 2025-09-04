@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import {
   Container,
@@ -19,6 +20,7 @@ export function OAuthCallback() {
   const [authCode, setAuthCode] = useState<string>('');
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string>('');
+  const [copied, setCopied] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -33,14 +35,7 @@ export function OAuthCallback() {
     }
 
     if (code) {
-      // Gerar um código de 4 dígitos baseado no hash do código OAuth
-      const hash = code.split('').reduce((a, b) => {
-        a = (a << 5) - a + b.charCodeAt(0);
-        return a & a;
-      }, 0);
-
-      const shortCode = Math.abs(hash).toString().slice(-4).padStart(4, '0');
-      setAuthCode(shortCode);
+      setAuthCode(code);
 
       // Aqui você pode enviar o código OAuth original para seu backend
       // para processar e associar ao código curto
@@ -51,6 +46,61 @@ export function OAuthCallback() {
 
     setIsLoading(false);
   }, [location]);
+
+  const handleCopy = useCallback(() => {
+    if (!authCode) return;
+    const copyText = authCode;
+    const done = () => {
+      setCopied(true);
+
+      toast.info('Código copiado!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+      });
+
+      setTimeout(() => setCopied(false), 2000);
+    };
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard
+        .writeText(copyText)
+        .then(done)
+        .catch(() => {
+          // fallback
+          try {
+            const textarea = document.createElement('textarea');
+            textarea.value = copyText;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            done();
+          } catch (_) {
+            /* ignore */
+          }
+        });
+    } else {
+      try {
+        const textarea = document.createElement('textarea');
+        textarea.value = copyText;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        done();
+      } catch (_) {
+        /* ignore */
+      }
+    }
+  }, [authCode]);
 
   if (isLoading) {
     return (
@@ -92,7 +142,29 @@ export function OAuthCallback() {
 
         <CodeContainer>
           <CodeLabel>SEU CÓDIGO:</CodeLabel>
-          <Code>{authCode}</Code>
+          <Code
+            role="button"
+            tabIndex={0}
+            title={copied ? 'Copiado!' : 'Clique para copiar'}
+            onClick={handleCopy}
+            onKeyDown={e => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleCopy();
+              }
+            }}
+            style={{
+              cursor: authCode ? 'pointer' : 'default',
+              userSelect: 'all',
+            }}
+          >
+            {authCode}
+          </Code>
+          {copied && (
+            <span style={{ marginLeft: 8, fontSize: 12, color: '#4caf50' }}>
+              Copiado!
+            </span>
+          )}
         </CodeContainer>
 
         <Instructions>
