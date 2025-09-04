@@ -4,6 +4,7 @@ import { Routes as Switch, Route, Navigate } from 'react-router-dom';
 import { useAuth } from '../hooks/auth';
 
 import { Home } from '../pages/Home';
+import { OAuthCallback } from '../pages/OAuthCallback';
 import { PrivacyPolicy } from '../pages/PrivacyPolicy';
 import { TermsAndConditions } from '../pages/TermsAndConditions';
 
@@ -24,6 +25,7 @@ export function Routes() {
   return (
     <Switch>
       <Route path="/" element={element(Home)} />
+      <Route path="/oauth/callback" element={<OAuthCallback />} />
       <Route path="/privacy-policy" element={element(PrivacyPolicy)} />
       <Route
         path="/terms-and-conditions"
